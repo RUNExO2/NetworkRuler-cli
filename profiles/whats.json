@@ -1,0 +1,7 @@
+{
+    "profile_name": "whats",
+    "settings": "-f dns",
+    "commands": [
+        "-f dns"
+    ]
+}

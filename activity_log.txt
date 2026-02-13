@@ -1,0 +1,444 @@
+2025-05-10 20:20:55.547648 - NetworkRuler-cli.py save network -f dns,-r dns,-reset winsock,-reset tcp,-reset proxy,-off proxy,-renew ip
+2025-05-10 20:20:55.554788 - save network -f dns,-r dns,-reset winsock,-reset tcp,-reset proxy,-off proxy,-renew ip
+2025-05-10 20:20:56.967245 - NetworkRuler-cli.py load network
+2025-05-10 20:20:56.972062 - load network
+2025-05-10 20:20:56.974436 - Loading profile: network
+2025-05-10 20:20:56.989200 - Executing command: -f
+2025-05-10 20:20:56.991259 - nr -f
+2025-05-10 20:20:56.994254 - Executing command: dns,-r
+2025-05-10 20:20:56.996516 - nr dns,-r
+2025-05-10 20:20:57.000296 - Executing command: dns,-reset
+2025-05-10 20:20:57.003116 - nr dns,-reset
+2025-05-10 20:20:57.006090 - Executing command: winsock,-reset
+2025-05-10 20:20:57.008160 - nr winsock,-reset
+2025-05-10 20:20:57.011028 - Executing command: tcp,-reset
+2025-05-10 20:20:57.012864 - nr tcp,-reset
+2025-05-10 20:20:57.015517 - Executing command: proxy,-off
+2025-05-10 20:20:57.017332 - nr proxy,-off
+2025-05-10 20:20:57.020187 - Executing command: proxy,-renew
+2025-05-10 20:20:57.022094 - nr proxy,-renew
+2025-05-10 20:20:57.025719 - Executing command: ip
+2025-05-10 20:20:57.027564 - nr ip
+2025-05-10 20:21:56.392899 - NetworkRuler-cli.py load network
+2025-05-10 20:21:56.398564 - load network
+2025-05-10 20:21:56.400921 - Loading profile: network
+2025-05-10 20:21:56.404775 - Profile 'network' loaded successfully.
+2025-05-10 20:21:56.407193 - Executing command: -f
+2025-05-10 20:21:56.409722 - nr -f
+2025-05-10 20:21:56.412354 - Executing command: dns,-r
+2025-05-10 20:21:56.414698 - nr dns,-r
+2025-05-10 20:21:56.417441 - Executing command: dns,-reset
+2025-05-10 20:21:56.419836 - nr dns,-reset
+2025-05-10 20:21:56.422518 - Executing command: winsock,-reset
+2025-05-10 20:21:56.424999 - nr winsock,-reset
+2025-05-10 20:21:56.427656 - Executing command: tcp,-reset
+2025-05-10 20:21:56.429575 - nr tcp,-reset
+2025-05-10 20:21:56.432459 - Executing command: proxy,-off
+2025-05-10 20:21:56.434341 - nr proxy,-off
+2025-05-10 20:21:56.437360 - Executing command: proxy,-renew
+2025-05-10 20:21:56.439160 - nr proxy,-renew
+2025-05-10 20:21:56.441434 - Executing command: ip
+2025-05-10 20:21:56.443381 - nr ip
+2025-05-10 20:21:57.537119 - NetworkRuler-cli.py save network -f dns,-r dns,-reset winsock,-reset tcp,-reset proxy,-off proxy,-renew ip
+2025-05-10 20:21:57.541014 - save network -f dns,-r dns,-reset winsock,-reset tcp,-reset proxy,-off proxy,-renew ip
+2025-05-10 20:21:58.685532 - NetworkRuler-cli.py load network
+2025-05-10 20:21:58.690628 - load network
+2025-05-10 20:21:58.694122 - Loading profile: network
+2025-05-10 20:21:58.698608 - Profile 'network' loaded successfully.
+2025-05-10 20:21:58.701449 - Executing command: -f
+2025-05-10 20:21:58.703753 - nr -f
+2025-05-10 20:21:58.707272 - Executing command: dns,-r
+2025-05-10 20:21:58.709432 - nr dns,-r
+2025-05-10 20:21:58.713251 - Executing command: dns,-reset
+2025-05-10 20:21:58.716122 - nr dns,-reset
+2025-05-10 20:21:58.719570 - Executing command: winsock,-reset
+2025-05-10 20:21:58.721524 - nr winsock,-reset
+2025-05-10 20:21:58.724835 - Executing command: tcp,-reset
+2025-05-10 20:21:58.727098 - nr tcp,-reset
+2025-05-10 20:21:58.730941 - Executing command: proxy,-off
+2025-05-10 20:21:58.732901 - nr proxy,-off
+2025-05-10 20:21:58.736043 - Executing command: proxy,-renew
+2025-05-10 20:21:58.738260 - nr proxy,-renew
+2025-05-10 20:21:58.741722 - Executing command: ip
+2025-05-10 20:21:58.743586 - nr ip
+2025-05-10 20:22:20.721869 - NetworkRuler-cli.py save network -f dns , -r dns , -reset winsock , -reset tcp,-reset proxy,-off proxy,-renew ip
+2025-05-10 20:22:20.728106 - save network -f dns , -r dns , -reset winsock , -reset tcp,-reset proxy,-off proxy,-renew ip
+2025-05-10 20:22:22.200870 - NetworkRuler-cli.py load network
+2025-05-10 20:22:22.206640 - load network
+2025-05-10 20:22:22.209035 - Loading profile: network
+2025-05-10 20:22:22.225136 - Profile 'network' loaded successfully.
+2025-05-10 20:22:22.227453 - Executing command: -f
+2025-05-10 20:22:22.229953 - nr -f
+2025-05-10 20:22:22.233189 - Executing command: dns
+2025-05-10 20:22:22.235129 - nr dns
+2025-05-10 20:22:22.238147 - Executing command: ,
+2025-05-10 20:22:22.239929 - nr ,
+2025-05-10 20:22:22.242930 - Executing command: -r
+2025-05-10 20:22:22.245146 - nr -r
+2025-05-10 20:22:22.248207 - Executing command: dns
+2025-05-10 20:22:22.250519 - nr dns
+2025-05-10 20:22:22.253409 - Executing command: ,
+2025-05-10 20:22:22.255152 - nr ,
+2025-05-10 20:22:22.258313 - Executing command: -reset
+2025-05-10 20:22:22.260106 - nr -reset
+2025-05-10 20:22:22.262603 - Executing command: winsock
+2025-05-10 20:22:22.264347 - nr winsock
+2025-05-10 20:22:22.266536 - Executing command: ,
+2025-05-10 20:22:22.268150 - nr ,
+2025-05-10 20:22:22.270591 - Executing command: -reset
+2025-05-10 20:22:22.272808 - nr -reset
+2025-05-10 20:22:22.275417 - Executing command: tcp,-reset
+2025-05-10 20:22:22.276894 - nr tcp,-reset
+2025-05-10 20:22:22.279125 - Executing command: proxy,-off
+2025-05-10 20:22:22.280921 - nr proxy,-off
+2025-05-10 20:22:22.283816 - Executing command: proxy,-renew
+2025-05-10 20:22:22.285802 - nr proxy,-renew
+2025-05-10 20:22:22.288909 - Executing command: ip
+2025-05-10 20:22:22.290940 - nr ip
+2025-05-10 20:23:18.125877 - NetworkRuler-cli.py load network
+2025-05-10 20:23:18.131393 - load network
+2025-05-10 20:23:18.133651 - Loading profile: network
+2025-05-10 20:23:18.136325 - Profile 'network' loaded successfully.
+2025-05-10 20:23:18.138522 - Executing command: -f
+2025-05-10 20:23:18.140565 - nr -f
+2025-05-10 20:23:18.143301 - Executing command: dns
+2025-05-10 20:23:18.145541 - nr dns
+2025-05-10 20:23:18.148879 - Executing command: ,
+2025-05-10 20:23:18.151249 - nr ,
+2025-05-10 20:23:18.154203 - Executing command: -r
+2025-05-10 20:23:18.156655 - nr -r
+2025-05-10 20:23:18.159301 - Executing command: dns
+2025-05-10 20:23:18.161542 - nr dns
+2025-05-10 20:23:18.164463 - Executing command: ,
+2025-05-10 20:23:18.166933 - nr ,
+2025-05-10 20:23:18.170044 - Executing command: -reset
+2025-05-10 20:23:18.172474 - nr -reset
+2025-05-10 20:23:18.175233 - Executing command: winsock
+2025-05-10 20:23:18.177674 - nr winsock
+2025-05-10 20:23:18.181088 - Executing command: ,
+2025-05-10 20:23:18.183078 - nr ,
+2025-05-10 20:23:18.186290 - Executing command: -reset
+2025-05-10 20:23:18.188706 - nr -reset
+2025-05-10 20:23:18.192385 - Executing command: tcp,-reset
+2025-05-10 20:23:18.194186 - nr tcp,-reset
+2025-05-10 20:23:18.198769 - Executing command: proxy,-off
+2025-05-10 20:23:18.200881 - nr proxy,-off
+2025-05-10 20:23:18.203829 - Executing command: proxy,-renew
+2025-05-10 20:23:18.205890 - nr proxy,-renew
+2025-05-10 20:23:18.209268 - Executing command: ip
+2025-05-10 20:23:18.211781 - nr ip
+2025-05-10 20:24:27.097055 - NetworkRuler-cli.py load network
+2025-05-10 20:24:27.101328 - load network
+2025-05-10 20:24:27.104057 - Loading profile: network
+2025-05-10 20:24:27.106680 - Profile 'network' loaded successfully.
+2025-05-10 20:24:27.108963 - Executing command: -f
+2025-05-10 20:24:27.110496 - nr -f
+2025-05-10 20:24:27.113297 - Executing command: dns
+2025-05-10 20:24:27.115202 - nr dns
+2025-05-10 20:24:27.117810 - Executing command: ,
+2025-05-10 20:24:27.119425 - nr ,
+2025-05-10 20:24:27.122401 - Executing command: -r
+2025-05-10 20:24:27.124225 - nr -r
+2025-05-10 20:24:27.127257 - Executing command: dns
+2025-05-10 20:24:27.129115 - nr dns
+2025-05-10 20:24:27.132440 - Executing command: ,
+2025-05-10 20:24:27.134257 - nr ,
+2025-05-10 20:24:27.137925 - Executing command: -reset
+2025-05-10 20:24:27.139684 - nr -reset
+2025-05-10 20:24:27.142477 - Executing command: winsock
+2025-05-10 20:24:27.144369 - nr winsock
+2025-05-10 20:24:27.148047 - Executing command: ,
+2025-05-10 20:24:27.149608 - nr ,
+2025-05-10 20:24:27.152332 - Executing command: -reset
+2025-05-10 20:24:27.154656 - nr -reset
+2025-05-10 20:24:27.157501 - Executing command: tcp,-reset
+2025-05-10 20:24:27.159595 - nr tcp,-reset
+2025-05-10 20:24:27.162212 - Executing command: proxy,-off
+2025-05-10 20:24:27.164559 - nr proxy,-off
+2025-05-10 20:24:27.167487 - Executing command: proxy,-renew
+2025-05-10 20:24:27.169480 - nr proxy,-renew
+2025-05-10 20:24:27.171907 - Executing command: ip
+2025-05-10 20:24:27.173513 - nr ip
+2025-05-10 20:24:28.714804 - NetworkRuler-cli.py save network -f dns , -r dns , -reset winsock , -reset tcp,-reset proxy,-off proxy,-renew ip
+2025-05-10 20:24:28.720941 - save network -f dns , -r dns , -reset winsock , -reset tcp,-reset proxy,-off proxy,-renew ip
+2025-05-10 20:24:39.881533 - NetworkRuler-cli.py save network -f dns , -r dns , -reset winsock , -reset tcp,-reset proxy,-off proxy,-renew ip cls
+2025-05-10 20:24:39.886678 - save network -f dns , -r dns , -reset winsock , -reset tcp,-reset proxy,-off proxy,-renew ip
+2025-05-10 20:24:43.833304 - NetworkRuler-cli.py save network -f dns , -r dns , -reset winsock , -reset tcp,-reset proxy,-off proxy,-renew ip cls
+2025-05-10 20:24:43.837885 - save network -f dns , -r dns , -reset winsock , -reset tcp,-reset proxy,-off proxy,-renew ip
+2025-05-10 20:24:46.824681 - NetworkRuler-cli.py load network
+2025-05-10 20:24:46.828627 - load network
+2025-05-10 20:24:46.831330 - Loading profile: network
+2025-05-10 20:24:46.844161 - Profile 'network' loaded successfully.
+2025-05-10 20:24:46.846637 - Executing command: -f
+2025-05-10 20:24:46.848257 - nr -f
+2025-05-10 20:24:46.850960 - Executing command: dns
+2025-05-10 20:24:46.852543 - nr dns
+2025-05-10 20:24:46.855834 - Executing command: -r
+2025-05-10 20:24:46.857539 - nr -r
+2025-05-10 20:24:46.859694 - Executing command: dns
+2025-05-10 20:24:46.861959 - nr dns
+2025-05-10 20:24:46.864849 - Executing command: -reset
+2025-05-10 20:24:46.866419 - nr -reset
+2025-05-10 20:24:46.868469 - Executing command: winsock
+2025-05-10 20:24:46.870363 - nr winsock
+2025-05-10 20:24:46.873121 - Executing command: -reset
+2025-05-10 20:24:46.874701 - nr -reset
+2025-05-10 20:24:46.876826 - Executing command: tcp
+2025-05-10 20:24:46.878465 - nr tcp
+2025-05-10 20:24:46.881383 - Executing command: -reset
+2025-05-10 20:24:46.883145 - nr -reset
+2025-05-10 20:24:46.885513 - Executing command: proxy
+2025-05-10 20:24:46.887491 - nr proxy
+2025-05-10 20:24:46.890080 - Executing command: -off
+2025-05-10 20:24:46.891755 - nr -off
+2025-05-10 20:24:46.894003 - Executing command: proxy
+2025-05-10 20:24:46.896164 - nr proxy
+2025-05-10 20:24:46.898925 - Executing command: -renew
+2025-05-10 20:24:46.900597 - nr -renew
+2025-05-10 20:24:46.903370 - Executing command: ip
+2025-05-10 20:24:46.906196 - nr ip
+2025-05-10 20:25:43.464771 - NetworkRuler-cli.py save network -f dns , -r dns , -reset winsock , -reset tcp,-reset proxy,-off proxy,-renew ip cls
+2025-05-10 20:25:43.515054 - save network -f dns , -r dns , -reset winsock , -reset tcp,-reset proxy,-off proxy,-renew ip
+2025-05-10 20:25:46.186944 - NetworkRuler-cli.py load network
+2025-05-10 20:25:46.192888 - load network
+2025-05-10 20:25:46.195232 - Loading profile: network
+2025-05-10 20:25:46.209269 - Profile 'network' loaded successfully.
+2025-05-10 20:25:46.211560 - Executing command: -f dns
+2025-05-10 20:25:46.213692 - nr -f dns
+2025-05-10 20:25:46.331971 - Executing command: -r dns
+2025-05-10 20:25:46.333967 - nr -r dns
+2025-05-10 20:25:46.449251 - Executing command: -reset winsock
+2025-05-10 20:25:46.480888 - nr -reset winsock
+2025-05-10 20:25:46.691147 - Executing command: -reset tcp
+2025-05-10 20:25:46.694183 - nr -reset tcp
+2025-05-10 20:25:46.911502 - Executing command: -reset proxy
+2025-05-10 20:25:46.913524 - nr -reset proxy
+2025-05-10 20:25:47.131916 - Executing command: -off proxy
+2025-05-10 20:25:47.133972 - nr -off proxy
+2025-05-10 20:25:47.339837 - Executing command: -renew ip
+2025-05-10 20:25:47.341724 - nr -renew ip
+2025-05-10 20:27:13.734820 - NetworkRuler-cli.py --help
+2025-05-10 20:27:13.740351 - --help
+2025-05-10 20:27:47.600121 - NetworkRuler-cli.py --help
+2025-05-10 20:27:47.606680 - --help
+2025-05-10 20:31:22.670923 - NetworkRuler-cli.py --help
+2025-05-10 20:31:22.675493 - --help
+2025-05-10 20:31:35.302008 - NetworkRuler-cli.py --help
+2025-05-10 20:31:35.307294 - --help
+2025-05-11 12:00:55.929449 - NetworkRuler-cli.py monitor --live
+2025-05-11 12:00:55.997342 - monitor --live
+2025-05-11 12:08:20.505238 - NetworkRuler-cli.py monitor --live
+2025-05-11 12:08:20.546001 - monitor --live
+2025-05-11 14:35:54.239969 - NetworkRuler-cli.py --limit steam.exe 5mb
+2025-05-11 14:35:54.264534 - --limit steam.exe 5mb
+2025-05-11 14:35:54.272783 - Throttling process: steam.exe to 5 Mbps using WinDivert
+2025-05-11 14:38:04.580284 - NetworkRuler-cli.py --limit steam.exe 5mb
+2025-05-11 14:38:04.594460 - --limit steam.exe 5mb
+2025-05-11 14:38:04.601661 - Throttling process: steam.exe to 5 Mbps using WinDivert
+2025-05-11 18:23:32.165836 - NetworkRuler-cli.py load network
+2025-05-11 18:23:32.204276 - load network
+2025-05-11 18:23:32.207458 - Loading profile: network
+2025-05-11 18:23:32.220827 - Profile 'network' loaded successfully.
+2025-05-11 18:23:32.223105 - Executing command: -f dns
+2025-05-11 18:23:32.225081 - nr -f dns
+2025-05-11 18:23:32.342662 - Executing command: -r dns
+2025-05-11 18:23:32.344536 - nr -r dns
+2025-05-11 18:23:32.476871 - Executing command: -reset winsock
+2025-05-11 18:23:32.479084 - nr -reset winsock
+2025-05-11 18:23:33.037344 - Executing command: -reset tcp
+2025-05-11 18:23:33.039769 - nr -reset tcp
+2025-05-11 18:23:33.240239 - Executing command: -reset proxy
+2025-05-11 18:23:33.242484 - nr -reset proxy
+2025-05-11 18:23:33.438095 - Executing command: -off proxy
+2025-05-11 18:23:33.440715 - nr -off proxy
+2025-05-11 18:23:33.652363 - Executing command: -renew ip
+2025-05-11 18:23:33.655278 - nr -renew ip
+2025-05-11 18:25:14.165449 - NetworkRuler-cli.py log
+2025-05-11 18:26:19.118879 - NetworkRuler-cli.py log
+2025-05-11 18:26:44.069835 - NetworkRuler-cli.py log
+2025-05-11 18:26:53.940909 - NetworkRuler-cli.py log
+2025-05-11 18:27:17.481411 - NetworkRuler-cli.py log
+2025-05-11 18:27:24.514359 - NetworkRuler-cli.py log
+2025-05-11 18:28:01.171577 - NetworkRuler-cli.py log
+2025-05-11 19:10:36.174228 - NetworkRuler-cli.py --list p
+2025-05-11 19:10:36.538846 - --list
+2025-05-11 19:10:59.067359 - NetworkRuler-cli.py app --list p
+2025-05-11 19:10:59.076958 - app --list
+2025-05-11 19:11:12.377761 - NetworkRuler-cli.py app --list p
+2025-05-11 19:11:12.392734 - app --list
+2025-05-11 19:17:55.589946 - NetworkRuler-cli.py --list p
+2025-05-11 19:17:55.599806 - --list
+2025-05-11 19:18:11.656846 - NetworkRuler-cli.py --kill python
+2025-05-11 19:18:11.664667 - --kill python
+2025-05-11 19:18:16.586376 - NetworkRuler-cli.py --kill python.exe
+2025-05-11 19:18:16.594319 - --kill python.exe
+2025-05-11 19:18:24.654437 - NetworkRuler-cli.py --list
+2025-05-11 19:18:24.661588 - --list
+2025-05-11 19:18:28.738601 - NetworkRuler-cli.py --list p
+2025-05-11 19:18:28.748014 - --list
+2025-05-11 19:18:35.180337 - NetworkRuler-cli.py app --list p
+2025-05-11 19:18:35.188314 - app --list
+2025-05-12 09:58:20.860737 - NetworkRuler-cli.py test --signals
+2025-05-12 10:00:09.949549 - NetworkRuler-cli.py test --signals
+2025-05-12 10:00:09.960617 - test --signals
+2025-05-12 10:00:09.970510 - Testing Wi-Fi and Bluetooth signal strength
+2025-05-12 10:02:32.219293 - NetworkRuler-cli.py test --signals
+2025-05-12 10:02:32.229179 - test --signals
+2025-05-12 10:02:32.235297 - Testing wireless signals
+2025-05-12 10:04:23.551138 - NetworkRuler-cli.py set-alias -k --kill
+2025-05-12 10:04:28.846794 - NetworkRuler-cli.py set-alias -k kill
+2025-05-12 10:04:42.407845 - NetworkRuler-cli.py set-alias -k --kill
+2025-05-12 19:16:35.410734 - NetworkRuler-cli.py test --signals
+2025-05-12 19:16:35.447811 - test --signals
+2025-05-12 19:16:35.451773 - Testing wireless signals
+2025-05-12 19:18:36.114205 - NetworkRuler-cli.py test --signals
+2025-05-12 19:18:36.120818 - test --signals
+2025-05-12 19:18:36.124174 - Testing wireless signals
+2025-05-12 19:18:40.575426 - NetworkRuler-cli.py test --signals
+2025-05-12 19:18:40.581352 - test --signals
+2025-05-12 19:18:40.583770 - Testing wireless signals
+2025-05-12 19:20:06.199281 - NetworkRuler-cli.py test --signals
+2025-05-12 19:20:06.206242 - test --signals
+2025-05-12 19:20:06.209189 - Testing wireless signals
+2025-05-12 19:20:23.454536 - NetworkRuler-cli.py test --signals
+2025-05-12 19:20:23.462225 - test --signals
+2025-05-12 19:20:23.466277 - Testing wireless signals
+2025-05-12 19:24:01.480871 - NetworkRuler-cli.py test --signals
+2025-05-12 19:24:01.488294 - test --signals
+2025-05-12 19:24:01.490927 - Testing wireless signals
+2025-05-12 19:26:39.035078 - NetworkRuler-cli.py test --signals
+2025-05-12 19:26:39.043240 - test --signals
+2025-05-12 19:26:39.046800 - Testing wireless signals
+2025-05-12 19:27:17.742916 - NetworkRuler-cli.py test --signals
+2025-05-12 19:27:17.749394 - test --signals
+2025-05-12 19:27:17.751720 - Testing wireless signals
+2025-05-12 19:27:55.012450 - NetworkRuler-cli.py test --signals
+2025-05-12 19:27:55.018235 - test --signals
+2025-05-12 19:27:55.020539 - Testing wireless signals
+2025-05-14 12:53:49.053811 - NetworkRuler-cli.py app --list
+2025-05-14 12:53:57.573935 - NetworkRuler-cli.py --help
+2025-05-14 13:39:42.064787 - NetworkRuler-cli.py --help
+2025-05-19 11:55:41.803493 - NetworkRuler-cli.py app --list b
+2025-05-19 11:56:05.466406 - NetworkRuler-cli.py --killall brave.exe
+2025-05-19 11:56:15.186656 - NetworkRuler-cli.py --help
+2025-05-19 11:56:48.055414 - NetworkRuler-cli.py --kill brave.exe --all
+2025-05-19 12:42:10.768147 - NetworkRuler-cli.py --task
+2025-05-19 12:42:18.457632 - NetworkRuler-cli.py --help
+2025-05-19 12:44:05.209722 - NetworkRuler-cli.py --task
+2025-05-19 12:44:26.011007 - NetworkRuler-cli.py --task
+2025-05-19 12:46:20.871581 - NetworkRuler-cli.py --task
+2025-05-19 12:46:26.383928 - NetworkRuler-cli.py --task
+2025-05-19 12:46:47.993796 - NetworkRuler-cli.py --task
+2025-05-19 12:47:42.423281 - NetworkRuler-cli.py --task
+2025-05-19 12:51:32.768781 - NetworkRuler-cli.py --task
+2025-05-19 12:57:57.998796 - NetworkRuler-cli.py proc list
+2025-05-19 13:26:38.292178 - NetworkRuler-cli.py proc list
+2025-05-19 13:31:08.942521 - NetworkRuler-cli.py proc list
+2025-05-19 15:04:35.940816 - NetworkRuler-cli.py proc list
+2025-05-19 15:04:56.184687 - NetworkRuler-cli.py --task
+2025-05-27 21:33:37.996542 - NetworkRuler-cli.py --kill brave.exe --all
+2025-05-29 18:51:31.756056 - NetworkRuler-cli.py monitor --live
+2025-05-29 18:51:50.006375 - NetworkRuler-cli.py --help
+2025-05-29 18:52:51.494330 - NetworkRuler-cli.py proc tree
+2025-05-29 18:54:38.424844 - NetworkRuler-cli.py proc monitor
+2025-05-29 18:56:40.766163 - NetworkRuler-cli.py save network -f dns , -r dns nr ,-renew ip
+2025-05-29 18:56:51.008793 - NetworkRuler-cli.py netstat
+2025-05-29 19:05:36.909080 - NetworkRuler-cli.py m
+2025-05-29 19:06:25.992532 - NetworkRuler-cli.py set-alias m monitor --live
+2025-05-29 19:06:36.789754 - NetworkRuler-cli.py m
+2025-05-29 19:07:52.848999 - NetworkRuler-cli.py --help
+2025-05-29 19:08:41.797277 - NetworkRuler-cli.py proc list
+2025-05-29 19:10:38.164308 - NetworkRuler-cli.py proc priority 1400 high
+2025-05-29 19:15:03.330457 - NetworkRuler-cli.py proc list
+2025-05-29 19:16:08.346924 - NetworkRuler-cli.py proc list
+2025-05-29 19:16:45.533726 - NetworkRuler-cli.py proc list
+2025-05-29 19:16:53.940514 - NetworkRuler-cli.py proc list
+2025-05-29 19:17:04.165563 - NetworkRuler-cli.py proc search riot
+2025-05-29 19:17:09.951480 - NetworkRuler-cli.py proc tree 1400
+2025-05-30 13:43:09.053879 - NetworkRuler-cli.py --list all b
+2025-05-30 15:31:38 - CLI command received: a:/Program/NetworkRuler-cli/NetworkRuler_cli.py
+2025-05-30 15:31:38 - CLI command received with no arguments
+2025-05-30 15:36:25 - process_info for PID: 184
+2025-05-30 15:36:32 - process_info for PID: 724
+2025-05-30 15:36:35 - process_tree
+2025-05-30 15:36:37 - open_files for PID: 724
+2025-05-30 15:36:40 - env_vars for PID: 724
+2025-05-30 15:36:46 - system_monitor
+2025-05-30 15:36:48 - Live monitoring started
+2025-05-30 15:36:55 - Live monitoring stopped
+2025-05-30 15:37:06 - Attempting Throttle Now: brave.exe 1
+2025-05-30 15:37:06 - Throttle failed for brave.exe: requires admin.
+2025-05-30 15:37:31 - Profile saved: what
+2025-05-30 15:37:33 - Attempted to load non-existent profile: what
+2025-05-30 15:38:17 - Profile saved: what
+2025-05-30 15:38:18 - Attempted to load non-existent profile: what
+2025-05-30 15:38:23 - Profile saved: whats
+2025-05-30 15:38:26 - Attempted to load non-existent profile: whats
+2025-05-30 15:38:34 - Set alias: "-f dns" -> -f
+2025-05-30 15:38:34 - Set alias: -f -> "-f dns"
+2025-05-30 15:38:45 - Enabled stealth mode (hid console).
+2025-05-30 15:38:45 - Stealth mode enabled
+2025-05-30 15:38:52 - Opened activity log from GUI
+2025-05-30 15:38:56 - Testing wireless signals
+2025-05-30 15:38:56 - Initiated wireless signal test
+2025-05-30 15:45:11 - CLI command received: nr --list
+2025-05-30 15:45:16 - CLI command received: nr --kill <name|pid>
+2025-05-30 15:45:17 - CLI command received: nr --limit <process.exe> <speed_mbps>
+2025-05-30 15:45:19 - CLI command received: nr app --list [prefix]
+2025-05-30 15:45:20 - CLI command received: nr srv --list
+2025-05-30 15:45:22 - CLI command received: nr background app --limit <speed_mbps>
+2025-05-30 15:45:23 - CLI command received: nr monitor --live
+2025-05-30 15:45:24 - CLI command received: nr save <profile_name> <settings_string>
+2025-05-30 15:45:25 - CLI command received: nr load <profile_name>
+2025-05-30 15:45:28 - CLI command received: nr stealth
+2025-05-30 15:45:29 - CLI command received: nr log
+2025-05-30 15:45:30 - CLI command received: nr set-alias <alias> <real_command_string>
+2025-05-30 15:45:31 - CLI command received: nr install-path
+2025-05-30 15:45:34 - CLI command received: nr test --signals
+2025-05-30 15:45:35 - CLI command received: nr proc list [sort_key]
+2025-05-30 15:45:37 - CLI command received: nr proc info <PID>
+2025-05-30 15:45:39 - CLI command received: nr proc tree
+2025-05-30 15:45:40 - CLI command received: nr proc openfiles <PID>
+2025-05-30 15:45:41 - CLI command received: nr proc connections <PID>
+2025-05-30 15:45:42 - CLI command received: nr proc env <PID>
+2025-05-30 15:45:42 - CLI command received: nr proc suspend <PID>
+2025-05-30 15:45:43 - CLI command received: nr proc resume <PID>
+2025-05-30 15:45:44 - CLI command received: nr proc priority <PID> <level>
+2025-05-30 15:45:45 - CLI command received: nr proc monitor
+2025-05-30 16:03:29 - Running command: ipconfig /registerdns
+2025-05-30 16:03:29 - Command failed: ipconfig /registerdns - Error: 1
+2025-05-30 16:03:29 - Executed: -r dns
+2025-06-02 12:19:37 - CLI command received: NetworkRuler_cli.py --help
+2025-06-02 12:19:37 - Showed help
+2025-06-02 12:20:00 - CLI command received: NetworkRuler_cli.py -k brave.exe all
+2025-06-02 12:20:13 - CLI command received: NetworkRuler_cli.py -k brave.exe --all
+2025-06-02 12:20:24 - CLI command received: NetworkRuler_cli.py --kill brave.exe --all
+2025-06-02 12:20:34 - CLI command received: NetworkRuler_cli.py --kill brave.exe --all
+2025-06-02 15:50:02 - CLI command received: NetworkRuler_cli.py --kill brave.exe --all
+2025-06-02 15:51:22 - CLI command received: a:/Program/NetworkRuler-cli/NetworkRuler_cli.py
+2025-06-02 15:51:22 - CLI command received with no arguments
+2025-06-02 15:52:26 - CLI command received: NetworkRuler_cli.py --kill brave.exe --all
+2025-06-02 15:57:05 - CLI command received: a:/Program/NetworkRuler-cli/NetworkRuler_cli.py
+2025-06-02 15:57:05 - CLI command received with no arguments
+2025-06-02 15:57:13 - CLI command received: NetworkRuler_cli.py --kill brave.exe --all
+2025-06-02 15:57:14 - Kill/Stop target not found: brave.exe
+2025-06-02 16:00:44 - process_tree
+2025-06-15 14:07:13 - CLI command received: NetworkRuler_cli.py --help
+2025-06-15 14:07:13 - Showed help
+2025-06-21 23:20:40 - CLI command received: NetworkRuler_cli.py kill idm -all
+2025-06-21 23:20:40 - Unknown command received: kill idm -all
+2025-06-21 23:20:48 - CLI command received: NetworkRuler_cli.py -help
+2025-06-21 23:20:48 - Unknown network command: -help
+2025-06-21 23:22:01 - CLI command received: NetworkRuler_cli.py --help
+2025-06-21 23:22:01 - Showed help
+2025-06-21 23:22:15 - CLI command received: NetworkRuler_cli.py --kill idm
+2025-06-21 23:22:15 - Kill/Stop target not found: idm
+2025-06-21 23:22:28 - CLI command received: NetworkRuler_cli.py app --list
+2025-06-21 23:22:28 - Listed applications (prefix: None)
+2025-06-21 23:22:42 - CLI command received: NetworkRuler_cli.py --kill IDMan.exe
+2025-06-21 23:22:42 - Killed/Stopped: IDMan.exe
+2025-11-16 12:46:46 - Live monitoring started
+2025-11-16 12:46:55 - Initiated wireless signal test
+2025-11-16 12:46:55 - Testing wireless signals
+2025-11-16 12:47:01 - Initiated wireless signal test
+2025-11-16 12:47:01 - Testing wireless signals

@@ -1,0 +1,1 @@
+{"profile_name": "network", "settings": "-f dns -r dns nr -renew ip", "commands": ["save network -f dns , -r dns nr ,-renew ip"]}
