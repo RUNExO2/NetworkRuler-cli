@@ -98,4 +98,24 @@ def config_paths(
 
 
 def main() -> None:
+    import sys
+    from networkruler_core.logging_config import configure_logging
+    from networkruler_core.aliases.service import AliasService
+
+    configure_logging()
+
+    known_commands = {
+        "dash", "help", "ps", "top", "stat", "tree", "kill", "if", "net", "wifi",
+        "ports", "bw", "watch", "dns", "paths", "version", "doctor", "alias",
+        "config", "monitor", "network", "process", "profile"
+    }
+
+    if len(sys.argv) > 1:
+        first_arg = sys.argv[1]
+        if not first_arg.startswith("-") and first_arg not in known_commands:
+            service = AliasService()
+            res = service.resolve_alias(first_arg)
+            if res.ok and res.command:
+                sys.argv = [sys.argv[0]] + res.command + sys.argv[2:]
+
     app()
