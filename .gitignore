@@ -1,0 +1,14 @@
+activity_log.txt
+aliases.json
+logs/
+
+__pycache__/
+*.pyc
+
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Virtual environments
+venv/
+.venv/
