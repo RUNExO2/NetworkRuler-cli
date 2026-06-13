@@ -1,24 +1,24 @@
 from __future__ import annotations
 
-from PySide6.QtCore import QEasingCurve, QPropertyAnimation, Qt
+from PySide6.QtCore import QEasingCurve, QPropertyAnimation
 from PySide6.QtWidgets import (
-    QDockWidget,
     QFrame,
     QGraphicsOpacityEffect,
     QHBoxLayout,
-    QLabel,
     QMainWindow,
-    QPlainTextEdit,
     QStackedWidget,
-    QVBoxLayout,
     QWidget,
 )
 
 from networkruler_gui.navigation import NavigationItem, Sidebar
 from networkruler_gui.screens import (
     DashboardScreen,
+    LogsScreen,
+    MonitorScreen,
     NetworkScreen,
     ProcessesScreen,
+    ProfilesScreen,
+    SettingsScreen,
 )
 from networkruler_gui.theme.engine import ThemeEngine
 from networkruler_gui.theme.tokens import ThemeName, ThemeTokens
@@ -51,6 +51,10 @@ class MainWindow(QMainWindow):
             NavigationItem("dashboard", "Dashboard", "System health and quick actions"),
             NavigationItem("processes", "Apps & Performance", "Manage user applications"),
             NavigationItem("network", "Network", "Check internet connection"),
+            NavigationItem("monitor", "Monitor", "Live bandwidth and process sampling"),
+            NavigationItem("profiles", "Profiles", "Preview and apply saved plans"),
+            NavigationItem("logs", "Logs", "Review recent app activity"),
+            NavigationItem("settings", "Settings", "Theme and runtime preferences"),
         ]
         self.sidebar = Sidebar(items)
         self.sidebar.setFixedWidth(252)
@@ -101,10 +105,16 @@ class MainWindow(QMainWindow):
     def _create_screens(self) -> None:
         dashboard = DashboardScreen()
         dashboard.navigate_requested.connect(self.sidebar.select)
+        settings = SettingsScreen()
+        settings.theme_changed.connect(self.apply_theme)
         screens: list[tuple[str, QWidget]] = [
             ("dashboard", dashboard),
             ("processes", ProcessesScreen()),
             ("network", NetworkScreen()),
+            ("monitor", MonitorScreen()),
+            ("profiles", ProfilesScreen()),
+            ("logs", LogsScreen()),
+            ("settings", settings),
         ]
         for key, screen in screens:
             screen.setObjectName(f"{key.title().replace('_', '')}Screen")
@@ -112,4 +122,4 @@ class MainWindow(QMainWindow):
             self.stack.addWidget(screen)
 
     def _create_console_dock(self) -> None:
-        pass # Removed to simplify UI for non-technical users
+        pass  # Removed to simplify UI for non-technical users

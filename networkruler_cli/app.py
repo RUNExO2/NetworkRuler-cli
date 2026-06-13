@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import platform
+import logging
 from typing import Annotated
 
 import psutil
@@ -103,6 +104,7 @@ def main() -> None:
     from networkruler_core.aliases.service import AliasService
 
     configure_logging()
+    logging.getLogger("networkruler.cli").info("Network Ruler CLI started")
 
     known_commands = {
         "dash", "help", "ps", "top", "stat", "tree", "kill", "if", "net", "wifi",

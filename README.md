@@ -1,154 +1,177 @@
-# NETWORK RULER 
-_A command-line network control tool for Windows power users_
+# Network Ruler
 
-**NETWORK RULER** is a lightweight Python-based CLI utility that offers fine-grained, per-process and per-service network control on Windows. Whether you're a gamer, sysadmin, or power user—this tool lets you monitor, throttle, kill, and log network activity with precision.
+Windows-first CLI and desktop toolkit for process visibility, network inspection,
+safe repair actions, profiles, aliases, and runtime logs.
 
----
+Network Ruler v2 is designed around a preview-first workflow: read-only commands
+are fast, write actions support dry-run previews, and risky operations require an
+explicit confirmation flag.
 
-##  Features
+## Status
 
--  List all running apps and services
--  Kill processes or stop services (by name or PID)
--  Live bandwidth monitoring
--  Save/load network profiles *(throttling coming soon)*
--  Smart alias system (`nr` global shortcut)
--  Log all network activity to custom files
--  Stealth mode for background execution
+- Version: `2.0.0`
+- Platform focus: Windows
+- Test status: `107 passed`
+- Lint status: `ruff check .`
+- Release notes: [docs/releases/v2.0.0.md](docs/releases/v2.0.0.md)
 
----
+## Screenshots
 
-##  Commands Overview
+### Dashboard
 
-| Command                             | Description                                      |
-|------------------------------------|--------------------------------------------------|
-| `--list`                           | List all running processes and services         |
-| `app --list`                       | List only apps                                  |
-| `srv --list`                       | List only services                              |
-| `--kill <name|pid>`                | Kill process or stop service                    |
-| `--limit <process.exe> <speed>`    | Throttle a process *(e.g., `5mb`) *             |
-| `background app --limit <speed>`   | Throttle background apps *(e.g., `1mb`) *       |
-| `monitor --live`                   | View real-time bandwidth stats                  |
-| `save <profile> <settings>`        | Save current setup to a profile                 |
-| `load <profile>`                   | Load and execute a saved profile                |
-| `log <file> <activity>`            | Append logs to a custom file                    |
-| `stealth`                          | Run tool hidden in background                   |
-| `--help`                           | Show help/usage info                            |
+![Dashboard](docs/screenshots/dashboard.png)
 
->  Throttling is **not yet functional**
+### Processes
 
----
+![Processes](docs/screenshots/processes.png)
 
-##  Process Viewer (`proc`)
+### Network
 
-```
-proc list [sort_key]
-proc info <PID>
-proc tree
-proc openfiles <PID>
-proc connections <PID>
-proc env <PID>
-proc resume <PID>
-proc priority <PID> <level>
-proc monitor
-```
+![Network](docs/screenshots/network.png)
 
----
+### Themes
 
-##  Network Commands (`nr` aliases)
+![Themes](docs/screenshots/themes.png)
 
-```
-nr -f dns
-nr -r dns
-nr -d ip
-nr -renew ip
-nr -s config
-nr -s interfaces
-nr -show firewall
-nr -reset firewall
-nr -on firewall
-nr -off firewall
-nr -reset winsock
-nr -reset tcp
-nr -reset proxy
-nr -show proxy
-nr -off proxy
+## Features
+
+- Fast CLI shortcuts for process, network, DNS, bandwidth, and path checks.
+- Structured command groups for process, network, monitor, profile, alias, and
+  config workflows.
+- Guarded write actions with `--dry-run` and `--yes`.
+- Smart aliases with create, resolve, execute, list, and remove commands.
+- Seven-screen PySide desktop GUI: Dashboard, Processes, Network, Monitor,
+  Profiles, Logs, and Settings.
+- Runtime log file in the user log directory.
+- User-scoped config, cache, data, and log paths outside the repository.
+
+Network throttling is not advertised in v2.0.0 because it is not implemented.
+
+## Install
+
+```powershell
+python -m pip install -e ".[dev,gui]"
 ```
 
----
+Run the CLI:
 
-##  Misc Commands
-
-```
---task
-monitor
-netstat
-info <PID>
-kill <PID>
-restart <PID>
+```powershell
+nr
+nr doctor
 ```
 
----
+Run the GUI:
 
-##  Examples
-
-```
-network ruler --list
-network ruler --kill explorer.exe
-network ruler app --list
-network ruler --limit fdm.exe 5mb
-network ruler background app --limit 1mb
-network ruler monitor --live
-nr save gaming "-f dns , -reset winsock , -off proxy"
-network ruler load gaming
-network ruler log net.log "Gaming profile active"
-network ruler stealth
+```powershell
+nr-gui
 ```
 
----
+## CLI Quick Reference
 
-##  Alias Setup
+```powershell
+nr ps [text]
+nr top --limit 10
+nr stat <pid>
+nr tree
+nr kill <pid|name> --dry-run
+nr kill <pid|name> --yes
 
-To use `nr` globally:
+nr net
+nr if
+nr wifi
+nr ports
+nr bw --samples 5
+nr dns flush --dry-run
+nr dns flush --yes
 
-1. Place `network_ruler.bat` & `network_ruler.ps1` in any folder
-2. Add that folder to your system `PATH`
-3. Now just run `nr` from any terminal
+nr profile list
+nr profile validate <name>
+nr profile apply <name> --dry-run
 
+nr alias create flush dns flush
+nr alias execute flush --dry-run
+nr alias resolve flush
+nr alias list
+
+nr config paths
 ```
-nr --list
+
+## Architecture
+
+```mermaid
+flowchart TD
+    GUI["PySide GUI"]
+    CLI["Typer CLI"]
+    Core["networkruler_core"]
+    Safety["Safety previews"]
+    Process["Process service"]
+    Network["Network service"]
+    Monitor["Monitor service"]
+    Profiles["Profile service"]
+    Aliases["Alias service"]
+    Logs["Rotating log file"]
+    Windows["Windows platform adapters"]
+
+    GUI --> Core
+    CLI --> Core
+    Core --> Safety
+    Core --> Process
+    Core --> Network
+    Core --> Monitor
+    Core --> Profiles
+    Core --> Aliases
+    Core --> Logs
+    Process --> Windows
+    Network --> Windows
+    Monitor --> Windows
 ```
 
----
+## Why I Built This
 
-##  Pro Tip: Best Use of Profiles
+Windows power users often need a quick answer to simple questions: what is
+running, what is using the network, what adapter is active, and what repair
+action is safe to try next. The first version of Network Ruler proved the idea,
+but it mixed old commands, UI experiments, and risky operations too closely.
 
-For the ultimate network and performance boost:
+The v2 goal was to turn that idea into a maintainable tool: split the CLI, GUI,
+and core services; move runtime files outside the repo; make write actions
+previewable; and keep the desktop interface polished enough to demonstrate the
+same workflows visually.
 
-1. Run:
-   ```
-   nr --help
-   nr --list
-   ```
-2. Copy the **entire output** of both commands.
-3. Paste it into your favorite AI and say:
-   ```
-   Give me the best profile to enhance the network and performance of my PC
-   ```
-4. Apply the suggested settings using:
-   ```
-   nr load <AI-suggested-profile>
-   ```
+The hardest part was balancing power-user commands with safety. DNS, firewall,
+proxy, process, and network actions can be useful, but they should never feel
+surprising. That led to the shared safety model and the dry-run-first profile
+system.
 
----
+The main lesson was that credibility comes from alignment: documentation should
+match the code, tests should describe the intended product, and visible features
+like aliases and logs need to work end to end.
 
-##  Notes
+## Development
 
-- Run as admin for full functionality
-- Throttling support is in progress
-- Profile save/load works for command replays
+```powershell
+pytest
+ruff check .
+```
 
----
+GitHub Actions runs both checks on every push and pull request:
+
+- `.github/workflows/tests.yml`
+- `.github/workflows/lint.yml`
+
+## Legacy Code
+
+The `legacy/` directory is archived reference material from the original CLI and
+PyQt GUI. It is documented in [legacy/README.md](legacy/README.md), excluded from
+ruff, and must not be imported by v2 packages.
+
+## Releases
+
+- `v2.0.0`: Windows-first v2 rebuild with CLI, GUI, profiles, aliases, logging,
+  tests, linting, screenshots, and release notes.
+
+Future minor releases should use `v2.1.0`, `v2.2.0`, and so on.
 
 ## Author
 
-Built by **RUNEoX**
+Built by **RUNEoX**.

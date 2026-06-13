@@ -15,7 +15,7 @@ class NavigationItem:
 
 class NavigationButton(QPushButton):
     def __init__(self, item: NavigationItem, parent: QWidget | None = None) -> None:
-        super().__init__(item.title, parent)
+        super().__init__(item.title.replace("&", "&&"), parent)
         self.item = item
         self.setObjectName("NavButton")
         self.setCheckable(True)

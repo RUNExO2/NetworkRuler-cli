@@ -1,9 +1,15 @@
 from __future__ import annotations
 
+import logging
 from collections.abc import Sequence
 
 
 def main(argv: Sequence[str] | None = None) -> int:
+    from networkruler_core.logging_config import configure_logging
+
+    configure_logging()
+    logging.getLogger("networkruler.gui").info("Network Ruler GUI started")
+
     try:
         from PySide6.QtGui import QFont
         from PySide6.QtWidgets import QApplication

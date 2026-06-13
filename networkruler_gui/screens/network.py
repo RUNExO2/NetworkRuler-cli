@@ -12,8 +12,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from networkruler_core.exceptions import UnsupportedPlatformError
-from networkruler_core.network.models import NetworkActionResult, InterfaceInfo
+from networkruler_core.network.models import NetworkActionResult
 from networkruler_core.network.service import NetworkService
 from networkruler_core.safety import SafetyContext
 from networkruler_gui.screens.base import Screen, page_layout, scroll_page

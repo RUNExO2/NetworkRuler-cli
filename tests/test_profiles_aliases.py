@@ -180,3 +180,14 @@ def test_alias_resolve_cli_prints_shortcut(tmp_path, monkeypatch):
 
     assert result.exit_code == 0
     assert "network dns flush" in result.output
+
+
+def test_alias_execute_routes_to_cli_command(tmp_path, monkeypatch):
+    service = AliasService(alias_file=tmp_path / "aliases.json")
+    service.set_alias("ver", ["version"])
+    monkeypatch.setattr("networkruler_cli.commands.alias.AliasService", lambda: service)
+
+    result = CliRunner().invoke(app, ["alias", "execute", "ver"])
+
+    assert result.exit_code == 0
+    assert "2.0.0" in result.output

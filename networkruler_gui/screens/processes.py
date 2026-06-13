@@ -12,7 +12,6 @@ from PySide6.QtWidgets import (
     QTableView,
     QWidget,
     QVBoxLayout,
-    QHBoxLayout,
 )
 
 from networkruler_core.process.models import ProcessActionResult, ProcessInfo
@@ -74,17 +73,27 @@ class ProcessTableModel(QAbstractTableModel):
 
         if role == Qt.ItemDataRole.DisplayRole:
             if not self.show_advanced:
-                if col == 0: return process.name
-                if col == 1: return f"{process.cpu_percent:.1f}%"
-                if col == 2: return f"{process.memory_percent:.1f}%"
-                if col == 3: return process.status or ""
+                if col == 0:
+                    return process.name
+                if col == 1:
+                    return f"{process.cpu_percent:.1f}%"
+                if col == 2:
+                    return f"{process.memory_percent:.1f}%"
+                if col == 3:
+                    return process.status or ""
             else:
-                if col == 0: return str(process.pid)
-                if col == 1: return process.name
-                if col == 2: return f"{process.cpu_percent:.1f}%"
-                if col == 3: return f"{process.memory_percent:.1f}%"
-                if col == 4: return process.status or ""
-                if col == 5: return process.username or ""
+                if col == 0:
+                    return str(process.pid)
+                if col == 1:
+                    return process.name
+                if col == 2:
+                    return f"{process.cpu_percent:.1f}%"
+                if col == 3:
+                    return f"{process.memory_percent:.1f}%"
+                if col == 4:
+                    return process.status or ""
+                if col == 5:
+                    return process.username or ""
         elif role == Qt.ItemDataRole.UserRole and col == 0:
             return process.pid
         elif role == Qt.ItemDataRole.TextAlignmentRole:
@@ -243,8 +252,10 @@ class ProcessesScreen(Screen):
         self.detail_title.setText(f"{process.name}")
         
         impact = "Low"
-        if process.cpu_percent > 20: impact = "High"
-        elif process.cpu_percent > 5: impact = "Medium"
+        if process.cpu_percent > 20:
+            impact = "High"
+        elif process.cpu_percent > 5:
+            impact = "Medium"
         
         self.detail_meta.setText(f"Impact: {impact}\nCPU: {process.cpu_percent:.1f}%\nMemory: {process.memory_percent:.1f}%" + (f"\nPID: {process.pid}" if self._advanced_mode else ""))
         self.status_pill.setText(process.status or "unknown")
@@ -284,7 +295,7 @@ class ProcessesScreen(Screen):
     def _confirm_and_execute(self, action: str, pid: int, preview: ProcessActionResult) -> None:
         if not SafetyPreviewDialog.confirm(
             parent=self,
-            title=f"Confirm action",
+            title="Confirm action",
             message="Are you sure you want to apply this action to the application?",
             payload=preview.to_dict(),
         ):

@@ -1,4 +1,5 @@
 from pathlib import Path
+import logging
 
 from typer.testing import CliRunner
 
@@ -39,3 +40,13 @@ def test_doctor_runs():
     assert result.exit_code == 0
     assert "NetworkRuler doctor" in result.output
     assert "Runtime paths" in result.output
+
+
+def test_logging_initialization_writes_networkruler_log(tmp_path):
+    from networkruler_core.logging_config import configure_logging
+
+    log_file = configure_logging(log_file=tmp_path / "networkruler.log")
+    logging.getLogger("networkruler.test").info("logging smoke test")
+
+    assert log_file.exists()
+    assert "logging smoke test" in log_file.read_text(encoding="utf-8")

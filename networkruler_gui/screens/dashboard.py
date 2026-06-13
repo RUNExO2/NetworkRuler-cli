@@ -1,27 +1,20 @@
 from __future__ import annotations
 
-from pathlib import Path
 from typing import Any
 
-from PySide6.QtCore import Qt, QTimer, Signal
+from PySide6.QtCore import QTimer, Signal
 from PySide6.QtWidgets import QGridLayout, QHBoxLayout, QLabel, QVBoxLayout, QWidget, QMessageBox
 
-from networkruler_core.config.paths import get_user_paths
-from networkruler_core.exceptions import UnsupportedPlatformError
-from networkruler_core.monitor.service import MonitorService
 from networkruler_core.network.service import NetworkService
 from networkruler_core.process.service import ProcessService
-from networkruler_core.safety import check_windows_admin, SafetyContext
+from networkruler_core.safety import SafetyContext
 from networkruler_gui.screens.base import Screen, page_layout, scroll_page
 from networkruler_gui.widgets import (
-    ActionCard,
     MetricCard,
-    PillBadge,
     PremiumCard,
     PrimaryButton,
     SecondaryButton,
     SectionHeader,
-    StatusDot,
 )
 
 
