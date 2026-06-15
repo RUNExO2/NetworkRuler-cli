@@ -1,8 +1,0 @@
-{
-    "nr -off proxy": "ngr",
-    " -off proxy": "ngr",
-    "ngr": "--list",
-    "ngw": "-off proxy",
-    "m": "monitor --live",
-    "-f dns": "-f"
-}

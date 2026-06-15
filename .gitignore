@@ -1,14 +1,33 @@
+# Runtime state (per-user, written outside the repo at runtime)
 activity_log.txt
 aliases.json
 logs/
+profiles/
 
+# Byte-compiled / caches
 __pycache__/
 *.pyc
-
 .pytest_cache/
 .ruff_cache/
+.mypy_cache/
+
+# Packaging / build artifacts
 *.egg-info/
+build/
+dist/
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
 
 # Virtual environments
 venv/
 .venv/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

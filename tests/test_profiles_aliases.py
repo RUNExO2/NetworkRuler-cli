@@ -5,7 +5,7 @@ from pathlib import Path
 
 from typer.testing import CliRunner
 
-from networkruler_cli.app import app
+from networkruler_cli.app import app, known_command_names
 from networkruler_core.aliases.service import AliasService
 from networkruler_core.profiles.service import ProfileService
 from networkruler_core.safety import RiskLevel, SafetyContext
@@ -132,6 +132,17 @@ def test_profile_apply_validates_every_action_before_execution(tmp_path):
     assert result.ok is False
     assert result.reason == "invalid"
     assert executed == []
+
+
+def test_known_command_names_cover_real_commands_and_groups():
+    names = known_command_names()
+
+    # Fast-lane shortcuts, top-level commands, and structured groups must all
+    # be recognised so a saved alias can never shadow a built-in command.
+    for command in ("ps", "top", "kill", "dns", "version", "doctor", "paths"):
+        assert command in names
+    for group in ("alias", "config", "monitor", "network", "process", "profile"):
+        assert group in names
 
 
 def test_alias_recursion_prevention(tmp_path):

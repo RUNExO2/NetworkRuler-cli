@@ -1,16 +1,20 @@
 from __future__ import annotations
 
-import platform
 import logging
+import platform
+import sys
 from typing import Annotated
 
 import psutil
 import typer
 from rich.console import Console
 from rich.table import Table
+from typer.main import get_command
 
 from networkruler_core import __version__
+from networkruler_core.aliases.service import AliasService
 from networkruler_core.config.paths import get_user_paths
+from networkruler_core.logging_config import configure_logging
 from networkruler_cli.commands.alias import app as alias_app
 from networkruler_cli.commands.fast import register_fast_commands, render_launcher
 from networkruler_cli.commands.monitor import app as monitor_app
@@ -98,26 +102,32 @@ def config_paths(
     console.print(table)
 
 
-def main() -> None:
-    import sys
-    from networkruler_core.logging_config import configure_logging
-    from networkruler_core.aliases.service import AliasService
+def known_command_names() -> set[str]:
+    """Command and group names Typer/Click recognises on the root app.
 
+    Derived from the live app so the alias resolver can never shadow a real
+    command, and so the set stays correct as commands are added or removed.
+    """
+    command = get_command(app)
+    return set(getattr(command, "commands", {}).keys())
+
+
+def _expand_leading_alias() -> None:
+    """Rewrite argv when the first token is a saved alias rather than a command."""
+    if len(sys.argv) <= 1:
+        return
+
+    first_arg = sys.argv[1]
+    if first_arg.startswith("-") or first_arg in known_command_names():
+        return
+
+    resolution = AliasService().resolve_alias(first_arg)
+    if resolution.ok and resolution.command:
+        sys.argv = [sys.argv[0], *resolution.command, *sys.argv[2:]]
+
+
+def main() -> None:
     configure_logging()
     logging.getLogger("networkruler.cli").info("Network Ruler CLI started")
-
-    known_commands = {
-        "dash", "help", "ps", "top", "stat", "tree", "kill", "if", "net", "wifi",
-        "ports", "bw", "watch", "dns", "paths", "version", "doctor", "alias",
-        "config", "monitor", "network", "process", "profile"
-    }
-
-    if len(sys.argv) > 1:
-        first_arg = sys.argv[1]
-        if not first_arg.startswith("-") and first_arg not in known_commands:
-            service = AliasService()
-            res = service.resolve_alias(first_arg)
-            if res.ok and res.command:
-                sys.argv = [sys.argv[0]] + res.command + sys.argv[2:]
-
+    _expand_leading_alias()
     app()
